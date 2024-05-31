@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>./lnlnta/fav-anime</title>
+</head>
+
+<style>
+
+    body{
+        background-color: darkslateblue;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+    }
+
+    #container{
+        text-align: center;
+        border: 2px white solid;
+        margin-left: 25%;
+        margin-right: 25%;
+        padding: 16px;
+        border-radius: 16px;
+        height: 512px;
+    }
+
+    button{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 2px white solid;
+        border-radius: 8px;
+        background-color: darkslateblue;
+        transition: all 0.25s ease-out;
+        cursor: pointer;
+    }
+
+    button:focus{
+        color: darkslateblue;
+        border: 2px white solid;
+        border-radius: 8px;
+        background-color: white;
+        transition: all 0.25s ease-in;
+        cursor: default;
+    }
+
+</style>
+
+<body>
+
+    <div id="container">
+        
+        <a href="main.html"><button onclick="goback()">go back...</button></a>
+    
+        <h1>>>favourite anime<< </h1>
+
+        <button onclick="evangelion()">neon genesis evangelion</button>
+
+        <button onclick="lain()">serial experiments lain</button>
+
+        <button onclick="madoka()">madoka magica</button>
+
+        <p id="description">
+        
+        </p>
+
+        <img height="256px" id="image1" src="" alt="">
+
+    </div>
+
+</body>
+
+<script>
+
+    let description = document.getElementById("description");
+    let image1 = document.getElementById("image1")
+
+    let desc_evangelion = "Neon Genesis Evangelion is an anime directed by Hideaki Anno from 1995 to 1996.";
+    let desc_lain = "Serial Experiments Lain is an anime created by Yoshitoshi ABe in 1998.";
+    let desc_madoka = "Puella Magi Madoka Magica is an anime directed by Gen Urobuchi in 2011.";
+
+    //////////////////////////////////////////////////////////
+
+    function goback(){
+        window.location.href
+    }
+    function evangelion(){
+        description.innerHTML = desc_evangelion;
+        image1.src = "assets/img/evangelion1.jpeg";
+    }
+    function lain(){
+        description.innerHTML = desc_lain;
+        image1.src = "assets/img/lain1.jpe";
+    }
+    function madoka(){
+        description.innerHTML = desc_madoka;
+        image1.src = "assets/img/madoka1.webp";
+    }
+    
+</script>
+</html>

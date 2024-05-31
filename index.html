@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>./lnlnta/</title>
+
+</head>
+
+<style>
+
+    body{
+        background-color: white;
+        font-family: 'Courier New', Courier, monospace;
+        background-image: url(assets/img/lainBackground1.jpg);
+        background-size: cover;
+    } 
+    
+    h5{
+        font-style: italic;
+    }
+
+    .box{
+        background-color: rgba(255, 192, 203, 0.519);
+        padding: 16px;
+        border-radius: 16px;
+        text-align: center;
+        color: white;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .circleButton{
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        background-color: rgba(137, 43, 226, 0);
+        color: white;
+        border: 2px white solid;
+        transition: background-color 0.2s ease-out;
+        cursor: pointer;
+        font-size: 32px;
+    }
+
+    .circleButton:hover{
+        background-color: white;
+        color: pink;
+        transition: background-color 0.2s ease-in;
+    }
+
+    .purpleheart{
+        margin-top: ;
+    }
+
+</style>
+
+<body>
+    
+    <div class="box">
+
+        <h1>⋅•⋅⊰∙∘☽ lnlnta ☾∘∙⊱⋅•⋅</h1>
+        <h4>(LaLana)</h4>
+
+        <img width="330px" src="assets/img/lain1.gif" alt="imglnlnta">
+
+        <br><br>
+
+        <img class="purpleheart" width="64px" src="assets/img/purpleheart1.gif" alt=""><a href="main.html"><button id="enter" class="circleButton">⌂</button></a><img class="purpleheart" width="64px" src="assets/img/purpleheart1.gif" alt="">
+
+        <br><br><br>
+
+        <h5 id="randomtxt">txt</h5>
+
+    </div>
+
+</body>
+
+<script>
+
+    //starting variables¬
+
+    var randomtxt = document.getElementById("randomtxt");//get random txt html
+
+    //functions¬
+
+    function randomMessage(kind){//chose a random message and write it
+        num = Math.floor(Math.random() * kind);
+
+        switch(num){
+            case 0:
+                randomtxt.textContent = "another node on the net"//me
+                break;
+            case 1:
+                randomtxt.textContent = "no matter where you go, everyone's connected"//serial experiments lain
+                break;
+            case 2:
+                randomtxt.textContent = "mankind's greatest fear is mankind itself"//neon genesis evangelion
+                break;
+            case 3:
+                randomtxt.textContent = "aren't we all monsters inside?"//elfen lied´
+                break;
+            case 4:
+                randomtxt.textContent = "kindness can bring you even bigger troubles"//mahou shoujo madoka magica
+                break;
+        }
+    }
+
+    //page load scripts¬
+
+    randomMessage(5) //choose a random message
+
+    //buttons¬
+    
+</script>
+
+</html>

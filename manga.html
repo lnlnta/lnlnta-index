@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>./lnlnta/fav-manga</title>
+
+</head>
+
+<style>
+
+    body{
+        color: black;
+        background-color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    button{
+        color: white;
+        background-color: black;
+        padding: 4px;
+        transition: all 0.1s ease-in;
+        border: none;
+    }
+
+    button:hover{
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 42px white, 0 0 82px white,0 0 92px white;
+        transition: all 0.1s ease-out;
+        cursor: pointer;
+    }
+
+    button:focus{
+        background-color: white;
+        border: black 2px solid;
+        color: black;
+        padding: 2px;
+        cursor: default;
+    }
+
+    #container{
+        background-color: white;
+        padding: 2em;
+        text-align: center;
+        height: 512px;
+    }
+
+</style>
+
+<body>
+
+    <div id="container">
+        
+        <a href="main.html"><button onclick="goback()">go back...</button></a>
+    
+        <h1>favourite manga</h1>
+
+        <button onclick="punpun()">oyasumi punpun</button>
+
+        <button onclick="firepunch()">fire punch</button>
+
+        <button onclick="berserk()">berserk</button>
+
+        <p id="description">
+        
+        </p>
+
+        <img height="256px" id="image1" src="" alt="">
+
+    </div>
+
+</body>
+
+<script>
+
+    let description = document.getElementById("description");
+    let image1 = document.getElementById("image1")
+
+    let desc_punpun = "Oyasumi Punpun is a manga written and drawn by Inio Asano from 2007 to 2013.";
+    let desc_firepunch = "Fire Punch is a manga written and drawn by Tatsuki Fujimoto from 2016 to 2018.";
+    let desc_berserk = "BERSERK is a manga written and drawn by Kentaro Miura † and studio gaga from 1997 untill nowdays.";
+
+    //////////////////////////////////////////////////////////
+
+    function goback(){
+        window.location.href
+    }
+    function punpun(){
+        description.innerHTML = desc_punpun;
+        image1.src = "assets/img/oyasumi1.webp";
+    }
+    function firepunch(){
+        description.innerHTML = desc_firepunch;
+        image1.src = "assets/img/firepunch1.jpeg";
+    }
+    function berserk(){
+        description.innerHTML = desc_berserk;
+        image1.src = "assets/img/berserk1.jpeg";
+    }
+
+</script>
+
+</html>
